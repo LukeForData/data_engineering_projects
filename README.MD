@@ -5,6 +5,7 @@
 - [System Architecture](#system-architecture)
 - [What You'll Learn](#what-youll-learn)
 - [Technologies](#technologies)
+- [Pre-Requisites](#pre-requisites)
 - [Getting Started](#getting-started)
 
 ## Introduction
