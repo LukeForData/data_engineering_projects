@@ -76,12 +76,15 @@ Definition of components used:
     ```bash
     docker-compose -f docker-compose-zoo.yaml exec spark-master bash
     ```
+    ````
     ```
     spark-submit \
   --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0,com.datastax.spark:spark-cassandra-connector_2.12:3.5.0 \
   /opt/spark/spark_stream.py
     ```
-   A successful run will show "Keyspace created successfully!" and "Table created successfully!" in the terminal
+    ````
+   
+A successful run will show "Keyspace created successfully!" and "Table created successfully!" in the terminal
 
 ![Terminal-Spark](https://github.com/LukeForData/data_engineering_projects/blob/main/end2nd-airflow-streaming-project/docker-terminal-spark.png)
 
