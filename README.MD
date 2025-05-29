@@ -63,7 +63,7 @@ Definition of components used:
     git clone https://github.com/LukeForData/data_engineering_projects/tree/main/end2nd-airflow-streaming-project
     ```
 
-2. Navigate to the project directory:
+2. Navigate to the project directory in Docker Terminal:
     ```bash
     cd end2nd-airflow-streaming-project
     ```
