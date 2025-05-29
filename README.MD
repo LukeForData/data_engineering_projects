@@ -18,7 +18,7 @@ The tech stack is the same as the original which includes Apache Airflow, Python
 
 ## System Architecture
 
-![System Topology](https://github.com/LukeForData/data_engineering_projects/blob/main/end2nd-airflow-streaming-project/Data%20engineering%20architecture.png)
+![System Topology](https://github.com/LukeForData/end2nd-airflow-streaming-project/blob/main/Data%20engineering%20architecture.png)
 
 Definition of components used:
 
@@ -86,7 +86,7 @@ Definition of components used:
    
    A successful run will show "Keyspace created successfully!" and "Table created successfully!" in the terminal
 
-![Terminal-Spark](https://github.com/LukeForData/data_engineering_projects/blob/main/end2nd-airflow-streaming-project/docker-terminal-spark.png)
+![Terminal-Spark](https://github.com/LukeForData/end2nd-airflow-streaming-project/blob/main/docker-terminal-spark.png)
 
 5. Open up Airflow and manually start the DAG to Stream Data
    
@@ -95,9 +95,9 @@ Definition of components used:
    - click on unpause next to user_automation dag
    - click on user_automation and click on Trigger Dag arrow
 
-![Dag1](https://github.com/LukeForData/data_engineering_projects/blob/main/end2nd-airflow-streaming-project/dag1.png)
+![Dag1](https://github.com/LukeForData/end2nd-airflow-streaming-project/blob/main/dag1.png)
 
-![Dag2](https://github.com/LukeForData/data_engineering_projects/blob/main/end2nd-airflow-streaming-project/dag2.png)
+![Dag2](https://github.com/LukeForData/end2nd-airflow-streaming-project/blob/main/dag2.png)
 
 6. Open up a new terminal in the original project directory and Open Cassandra to verify data has arrived
 
@@ -113,4 +113,10 @@ Definition of components used:
     select * from spark_streams.created_users;
     ```
 
-![Cassandra](https://github.com/LukeForData/data_engineering_projects/blob/main/end2nd-airflow-streaming-project/cassandra-output.png)
+![Cassandra](https://github.com/LukeForData/end2nd-airflow-streaming-project/blob/main/cassandra-output.png)
+
+7. When you are done, shut down the container
+
+   ```bash
+   docker-compose -f docker-compose-zoo.yaml down -v
+   ```
