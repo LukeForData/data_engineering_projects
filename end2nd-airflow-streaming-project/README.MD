@@ -78,9 +78,9 @@ Definition of components used:
     ```
 
     ```bash
-    spark-submit \
+    "spark-submit \
   --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0,com.datastax.spark:spark-cassandra-connector_2.12:3.5.0 \
-  /opt/spark/spark_stream.py
+  /opt/spark/spark_stream.py"
     ```
    
    A successful run will show "Keyspace created successfully!" and "Table created successfully!" in the terminal
@@ -94,9 +94,9 @@ Definition of components used:
    - click on unpause next to user_automation dag
    - click on user_automation and click on Trigger Dag arrow
 
-![Dag1](https://github.com/LukeForData/data_engineering_projects/blob/main/end2nd-airflow-streaming-project/Data%20engineering%20architecture.png)
+![Dag1](https://github.com/LukeForData/data_engineering_projects/blob/main/end2nd-airflow-streaming-project/dag1.png)
 
-![Dag2](https://github.com/LukeForData/data_engineering_projects/blob/main/end2nd-airflow-streaming-project/Data%20engineering%20architecture.png)
+![Dag2](https://github.com/LukeForData/data_engineering_projects/blob/main/end2nd-airflow-streaming-project/dag2.png)
 
 6. Open up a new terminal in the original project directory and Open Cassandra to verify data has arrived
 
@@ -104,10 +104,12 @@ Definition of components used:
     docker-compose -f docker-compose-zoo.yaml exec spark-master bash
     ```
 
-    '''bash
+    ```bash
     describe spark_streams.created_users;
-    '''
+    ```
 
-    '''bash
+    ```bash
     select * from spark_streams.created_users;
-    '''
+    ```
+
+![Cassandra](https://github.com/LukeForData/data_engineering_projects/blob/main/end2nd-airflow-streaming-project/cassandra-output.png)
