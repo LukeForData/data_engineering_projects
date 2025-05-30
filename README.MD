@@ -78,7 +78,7 @@ Definition of components used:
     docker-compose -f docker-compose-zoo.yaml exec spark-master bash
     ```
 
-    ```bash
+    ```sh
     "spark-submit \
   --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0,com.datastax.spark:spark-cassandra-connector_2.12:3.5.0 \
   /opt/spark/spark_stream.py"
