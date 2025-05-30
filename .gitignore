@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv/
+env/
+venv/
+*.egg-info/
+
+# Airflow
+airflow.db
+airflow.cfg
+logs/
+*.log
+
+# Docker
+*.pid
+*.sock
+*.swp
+# Ignore Docker named volumes (not needed, but for reference)
+# /var/lib/postgresql/data/
+# /var/lib/cassandra/
+# /var/lib/zookeeper/
+# /var/lib/kafka/data/
+
+# VSCode
+.vscode/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Ignore local requirements
+requirements.txt
+
+# Ignore local DAGs if not versioned
+# dags/
+
+# Ignore local scripts if not versioned
+# script/
+
+# Ignore Spark event logs
+spark-warehouse/
+metastore_db/
