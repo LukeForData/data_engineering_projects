@@ -105,17 +105,19 @@ Definition of components used:
     docker-compose -f docker-compose-zoo.yaml exec spark-master bash
     ```
 
-    ```bash
+    ```sql
     describe spark_streams.created_users;
     ```
 
-    ```bash
+    ```sql
     select * from spark_streams.created_users;
     ```
 
 ![Cassandra](https://github.com/LukeForData/end2nd-airflow-streaming-project/blob/main/cassandra-output.png)
 
 7. When you are done, shut down the container
+
+  - Note that the -v command removes the volumes from Docker, if you do not before running again the broker will not start
 
    ```bash
    docker-compose -f docker-compose-zoo.yaml down -v
